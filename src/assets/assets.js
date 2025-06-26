@@ -75,26 +75,26 @@ export const projectsData = [
 
   export const testimonialsData = [
     {
-        name: "Donald Jackman",
+        name: "Florian Writiz",
         title: "Marketing Manager",
         image: profile_img_1,
-        alt: "Portrait of Donald Jackman",
+        alt: "Portrait of Florian Writiz",
         rating: 5,
         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
     },
     {
-        name: "Richard Nelson",
+        name: "Richard Magar",
         title: "UI/UX Designer",
         image: profile_img_2,
-        alt: "Portrait of Richard Nelson",
+        alt: "Portrait of Richard Magar",
         rating: 4,
         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
     },
     {
-        name: "James Washington",
+        name: "Mohomad Salah",
         title: "Co-Founder",
         image: profile_img_3,
-        alt: "Portrait of James Washington",
+        alt: "Portrait of Mohomad Salah",
         rating: 5,
         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
     }
