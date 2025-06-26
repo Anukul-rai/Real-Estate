@@ -10,7 +10,7 @@ function Header() {
         <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">Explore Homes that fit your dreams</h2>
         <div className="space-x-6 mt-16">
             <a href="#Projects" className="border boder-white px-8 py-3 rounded ">Projects</a>
-            <a href="Contact" className="bg-blue-600 px-8 py-3 rounded " >Contact us</a>
+            <a href="#Contact" className="bg-blue-600 px-8 py-3 rounded " >Contact us</a>
         </div>
       </div>
     </div>
