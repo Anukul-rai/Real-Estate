@@ -63,7 +63,6 @@ function Contact() {
             </button>
         </form>
         
-        
         </motion.div>
     )
 }
