@@ -1,5 +1,8 @@
 import React from 'react'
 import { assets, testimonialsData } from '../assets/assets'
+import { motion } from "motion/react"
+
+
 
 function Testimonials() {
   return (

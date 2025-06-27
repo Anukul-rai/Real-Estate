@@ -9,7 +9,7 @@ function Header() {
       <Navbar/>
       <motion.div 
       initial={{opacity: 0, y:100}}
-      transition={{duration: 2.0}}
+      transition={{duration: 1.8}}
       whileInView={{opacity: 1, y:0}}
       viewport={{once:true}}
       className="container text-center mx-auto px-6 py-4 md:px-20 lg:px-32 text-white ">
