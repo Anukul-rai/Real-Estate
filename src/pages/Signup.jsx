@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { assets } from '../assets/assets';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { motion } from "motion/react"
+import { toast } from 'react-toastify';
+
+
 
 function Signup() {
     const [name, setName] = useState('');
@@ -11,6 +15,8 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [phone, setPhone] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,22 +25,39 @@ function Signup() {
         return;
     }
     setError('');
-    //  Submit the data (email, password, phone) to backend 
+    // Submit the data (email, password, phone) to backend 
     console.log({ name, email, password, phone });
+
+    //Clear all input fields
+    setName('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setPhone('');
+
+    toast.success('Account created successfully!');
+
+    //Redirect to home
+    navigate('/');
     };
 
     return (
-    <div className='min-h-screen flex flex-col justify-center items-center p-4 bg-gradient-to-br from-purple-900 via-purple-800 to-teal-600'>
-    <form  className="flex flex-col p-8 w-full max-w-sm space-y-6 bg-white rounded-2xl shadow-lg border" onSubmit={handleSubmit}>
-        <div className="mx-auto mb-2">
+    <div className='min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-900 via-purple-800 to-teal-600'>
+    <motion.form 
+    initial={{opacity: 0, y:50}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, y:0}}
+    viewport={{once:true}}
+    className="flex flex-col p-5 w-full max-w-sm space-y-6 bg-white rounded-2xl shadow-lg border" onSubmit={handleSubmit}>
+        <div className="mx-auto mb-2 border-1">
             <Link to="/"><img src={assets.logo} alt="to Home" className='cursor-pointer mx-auto' /></Link>
         </div>
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
             <h2 className='text-2xl font-semibold text-gray-800 mb-1'>Create an Account</h2>
             <p className='text-gray-600 text-sm'>Get started with your free account</p>
         </div>
         <input
-            className='border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
+            className='border border-gray-300 p-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
             type="text"
             placeholder=" Full Name"
             required
@@ -42,7 +65,7 @@ function Signup() {
             onChange={(e) => setName(e.target.value)}
         />
         <input
-            className='border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
+            className='border border-gray-300 p-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
             type="email"
             placeholder="Email"
             required
@@ -51,7 +74,7 @@ function Signup() {
         />
 
         <input
-            className='border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
+            className='border border-gray-300 p-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
             type="password"
             placeholder="Password"
             required
@@ -60,7 +83,7 @@ function Signup() {
         />
 
         <input
-            className='border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
+            className='border border-gray-300 p-2 mb-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200'
             type="password"
             placeholder="Confirm Password"
             required
@@ -75,7 +98,7 @@ function Signup() {
             value={phone}
             onChange={setPhone}
             containerClass="!w-full"
-            inputClass="!w-full !border !rounded !h-[48px] !text-base !pl-[52px]"
+            inputClass="!w-full !border !rounded !h-[41px] !text-base !pl-[52px]"
             buttonClass="!border !rounded !bg-white !w-[48px]"
             dropdownClass="!z-50"
         />
@@ -96,7 +119,7 @@ function Signup() {
             Log in
             </a>
         </p>
-        </form>
+        </motion.form>
     </div>
   );
 }
