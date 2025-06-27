@@ -48,7 +48,7 @@ function Signup() {
     transition={{duration: 1}}
     whileInView={{opacity: 1, y:0}}
     viewport={{once:true}}
-    className="flex flex-col p-5 w-full max-w-sm space-y-6 bg-white rounded-2xl shadow-lg border" onSubmit={handleSubmit}>
+    className="flex flex-col p-5 w-full max-w-sm space-y-6 bg-white rounded-2xl shadow-xl " onSubmit={handleSubmit}>
         <div className="w-full flex justify-center mb-3">
             <Link to="/"><img src={assets.logo_dark} alt="to Home" className='ml-25 cursor-pointer ' /></Link>
         </div>

@@ -29,7 +29,7 @@ function Navbar() {
             <a href="#Testimonials" className='cursor-pointer hover:text-gray-400'>Testimonials</a>
         </ul>
         <Link to="/sign-up">
-            <button className='hidden md:block bg-amber-100 px-8 py-2 rounded-full'>Sign up</button>
+            <button className='hidden md:block bg-amber-100 px-8 py-2 rounded-full cursor-pointer'>Sign up</button>
         </Link>
         <img src={assets.menu_icon} onClick={()=> setShowMobileMenu(true)} className='md:hidden w-7 cursor-pointer ' alt="" />
         </div>
