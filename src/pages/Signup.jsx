@@ -42,15 +42,15 @@ function Signup() {
     };
 
     return (
-    <div className='min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-900 via-purple-800 to-teal-600'>
+    <div className='min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-purple-900 via-purple-750 to-teal-500 '>
     <motion.form 
     initial={{opacity: 0, y:50}}
     transition={{duration: 1}}
     whileInView={{opacity: 1, y:0}}
     viewport={{once:true}}
     className="flex flex-col p-5 w-full max-w-sm space-y-6 bg-white rounded-2xl shadow-lg border" onSubmit={handleSubmit}>
-        <div className="mx-auto mb-2 border-1">
-            <Link to="/"><img src={assets.logo} alt="to Home" className='cursor-pointer mx-auto' /></Link>
+        <div className="w-full flex justify-center mb-3">
+            <Link to="/"><img src={assets.logo_dark} alt="to Home" className='ml-25 cursor-pointer ' /></Link>
         </div>
         <div className="text-center mb-4">
             <h2 className='text-2xl font-semibold text-gray-800 mb-1'>Create an Account</h2>
